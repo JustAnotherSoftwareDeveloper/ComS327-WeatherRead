@@ -1,0 +1,54 @@
+t0.csv    (valid):  all default values empty
+t1.csv    (valid):  all default values with spaces
+t2.csv    (valid):  full header with normal data
+t3.csv    (valid):  non-full header with normal data
+t4.csv    (valid):  Date validity check
+t5.csv    (valid):  Dewpt validity check (numbers with '+', '-', and '.', integer values, and 1008.3)
+t6.csv    (valid):  Dewpt Q validity check (all valid values of [0-79ACIMPRU])
+t7.csv    (valid):  HrMn validity check (checks various times from 0001-2359)
+t8.csv    (valid):  I validity check
+t9.csv    (valid):  IDentification Name validity check (checks names of various length from 1-30)
+t10.csv   (valid):  NCDC validity check (checks various 5-letter character combinations)
+t11.csv   (valid):  QCP validity check (checks various values of length 4 or less)
+t12.csv   (valid):  Checking Date and HrMn
+t13.csv   (valid):  Checking Dewpt and Dewpt Q
+t14.csv   (valid):  Checking IDentification Name, USAF, and NCDC
+t15.csv   (valid):  Checking I, QCP, and RHx
+t16.csv   (valid):  Checking Slp and Slp Q
+t17.csv   (valid):  Checking Temp and Temp Q
+t18.csv   (valid):  Checking Type
+t19.csv   (valid):  Checking Wind Dir, Wind Dir I, and Wind Dir Q
+t20.csv   (valid):  Checking Wind Spd, Wind Spd Q
+t21.csv   (valid):  Checking all String types (IDentification Name, NCDC, QCP, Type)
+t22.csv   (valid):  Checking all char types (Dewpt Q, I, Slp Q, Temp Q, Wind Dir I, Wind Dir Q, Wind Spd Q)
+t23.csv   (valid):  Checking all int types (Date, HrMn, RHx, USAF, Wind Dir)
+t24.csv   (valid):  Checking all float types (Dewpt, Slp, Temp, Wind Spd)
+t25       (valid):  full header with normal data, but simply named "t42" and not "t42.csv"
+t26.csv   (valid):  header and data of size 1 (with HrMn)
+t27.csv (invalid):  empty or spaces for non-string values with no default
+t28.csv (invalid):  non-full header with an extra comma and normal data
+t29.csv (invalid):  non-full header with normal data with an extra comma
+t30.csv (invalid):  nonexistent file
+t31.csv (invalid):  non-full header with a missing data column
+t32.csv (invalid):  Dewpt invalidity check (non-numerical value)
+t33.csv (invalid):  Dewpt invalidity check (value too long)
+t34.csv (invalid):  Dewpt Q invalidity check (checks 8, which is not in spec)
+t35.csv (invalid):  HrMn invalidity check (checks 12345, which is too long)
+t36.csv (invalid):  NCDC invalidity check (checks name of length 6, which is too long)
+
+Test files by Ian Malerich
+header_invalid0.csv:    Extra comma in header; 3rd header is invalid
+header_invalid1.csv:    Extra comma in header (trailing)
+header_invalid2.csv:    Extra comma in header (leading)
+header_invalid3.csv:    bogus header (BOGUS); 4th header is invalid
+header_invalid4.csv:    1st header is wrong and also very long (potential crash)
+header_invalid5.csv:    The NCDC header is listed twice
+header_invalid6.csv:    Headers are not allowed to have spaces in front of them
+
+data_invalid0.csv:      RHx should not be a float
+data_invalid1.csv:      Wind Dir should not be a float
+data_invalid2.csv:      USAF has non-numerical data
+data_invalid3.csv:      Wind Dir exceeds the allowed value range
+data_invalid4.csv:      Missing field within row
+data_invalid5.csv:      Missing field at the end of a row
+data_invalid6.csv:      Extra field at the end of a row
