@@ -1,6 +1,7 @@
 # ComS327-WeatherRead
 University Project, first time working with C
 
+# I wasn't the programmer I am today when I wrote this. I don't remember if I got it 100% working. 
 Below is the description: 
 
 Computer Science 327
